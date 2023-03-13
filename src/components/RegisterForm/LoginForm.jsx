@@ -51,6 +51,7 @@ export const LoginForm = () => {
               <Input
                 type="email"
                 name="email"
+                placeholder="across@mail.com"
                 onChange={handleChange}
                 value={state.email}
               />
@@ -61,6 +62,7 @@ export const LoginForm = () => {
               <Input
                 type="password"
                 name="password"
+                placeholder="examplepwd12345"
                 onChange={handleChange}
                 value={state.password}
               />
