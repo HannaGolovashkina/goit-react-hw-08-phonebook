@@ -30,8 +30,8 @@ export const LoginForm = () => {
       <Title>Login</Title>
 
       <Formik
-        onSubmit={handleSubmit}
-      >
+        // onSubmit={handleSubmit}
+        >
           <Form onSubmit={handleSubmit}>
             <Label>
               <TitleInput>Your e-mail adress?</TitleInput>

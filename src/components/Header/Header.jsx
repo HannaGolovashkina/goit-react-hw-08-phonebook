@@ -23,7 +23,7 @@ function Header() {
       </Title>
       {isLoggedIn ? (
         <div >
-          <Paragraf >{user.name}</Paragraf>
+          <Paragraf>{user.name}</Paragraf>
           <Button type="button"  onClick={onLogOut}>
             Log Out
           </Button>

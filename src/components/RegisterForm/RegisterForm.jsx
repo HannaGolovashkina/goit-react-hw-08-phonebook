@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+
 import { useNavigate } from 'react-router-dom';
 import { registerNewUser } from './../../redux/auth/authOperations';
 import { Formik, Form, ErrorMessage } from 'formik';
@@ -29,7 +30,7 @@ const handleSubmit = e => {
       <Title>Registration</Title>
 
       <Formik
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
       >
           <Form onSubmit={handleSubmit}>
             <Label>
