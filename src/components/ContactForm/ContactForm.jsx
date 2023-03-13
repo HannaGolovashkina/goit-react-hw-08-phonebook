@@ -1,21 +1,21 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactsOperations';
+import { addContact } from 'redux/contactsSlice/contactsOperations';
 import { Label, Title, Input, Button } from './ContactForm.styled';
 // import { Report } from 'notiflix/build/notiflix-report-aio';
 
-function ContactForm({ onClose }) {
+function ContactForm() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const onChangeName = e => setName(e.currentTarget.value);
-  const onChangeNunber = e => setPhone(e.currentTarget.value);
+  const onChangeNunber = e => setNumber(e.currentTarget.value);
 
   const onSubmitForm = e => {
     e.preventDefault();
 
-    const newElement = { name, phone };
+    const newElement = { name, number };
 
     // contacts.some(contact => contact.name === name)
     //   ? Report.warning(
@@ -27,12 +27,12 @@ function ContactForm({ onClose }) {
       dispatch(addContact(newElement));
 
     reset();
-    onClose();
+    // onClose();
   };
 
   const reset = () => {
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   return (
@@ -55,7 +55,7 @@ function ContactForm({ onClose }) {
           onChange={onChangeNunber}
           type="tel"
           name="number"
-          value={phone}
+          value={number}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   fetchContacts,
   deleteContact,
-} from 'redux/contactsOperations';
+} from 'redux/contactsSlice/contactsOperations';
 import Contact from 'components/Contact/Contact';
 import { Item } from './ContactList.styled';
 

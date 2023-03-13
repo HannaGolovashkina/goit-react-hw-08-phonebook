@@ -1,7 +1,7 @@
 import { FaTrash, FaUserAlt } from 'react-icons/fa';
 import { Wrapper, Icon, Number, Button } from './Contact.styled';
 
-function Contact({ name, phone, onClick }) {
+function Contact({ name, number, onClick }) {
   return (
     <>
       <Wrapper>
@@ -11,7 +11,7 @@ function Contact({ name, phone, onClick }) {
         <p>{name}</p>
       </Wrapper>
       <Wrapper>
-        <Number>{phone}</Number>
+        <Number>{number}</Number>
         <Button type="button" onClick={onClick}>
           <FaTrash />
         </Button>
