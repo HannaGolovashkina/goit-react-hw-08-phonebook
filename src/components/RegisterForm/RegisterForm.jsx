@@ -1,19 +1,13 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { useNavigate } from 'react-router-dom';
-
 import { registerNewUser } from './../../redux/auth/authOperations';
-
 import { Formik, Form, ErrorMessage } from 'formik';
 import { Title, Label, TitleInput, Input, Button } from './RegisterForm.styled';
-// import useRegistrUser from 'hooks/useRegistrUser';
-// import { userRegisterSchema } from 'utilities/validationSchema';
 
 const initialState = { name: '', email: '', password: '' };
 
 export const RegistrationForm = () => {
-//   const { onSubmitForm } = useRegistrUser();
 const [state, setState] = useState(initialState);
 const dispatch = useDispatch();
 const navigate = useNavigate();
@@ -35,11 +29,8 @@ const handleSubmit = e => {
       <Title>Registration</Title>
 
       <Formik
-        // initialState={{ name: '', email: '', password: '' }}
-        // onSubmit={handleSubmit}
-        // validationSchema={userRegisterSchema}
+        onSubmit={handleSubmit}
       >
-        {/* {({ state, handleChange, handleSubmit, isSubmitting }) => ( */}
           <Form onSubmit={handleSubmit}>
             <Label>
               <TitleInput>What is your name?</TitleInput>
@@ -75,11 +66,9 @@ const handleSubmit = e => {
               <ErrorMessage name="password" component="div" />
             </Label>
             <Button type="submit">
-              {/* {isSubmitting ? '...' : 'Registration'} */}
               Registration
             </Button>
           </Form>
-        {/* )} */}
       </Formik>
     </>
   );
