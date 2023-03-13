@@ -28,12 +28,12 @@ const ContactList =() => {
 
   return (
     <ul>
-      {filteredContactList.map(({ id, name, phone }) => {
+      {filteredContactList.map(({ id, name, number }) => {
         return (
           <Item key={id}>
             <Contact
               name={name}
-              number={phone}
+              number={number}
               onClick={() => {
                 dispatch(deleteContact(id));}}
               contactId={id}
