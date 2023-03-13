@@ -78,36 +78,3 @@ export const LoginForm = () => {
     </>
   );
 }
-//   return (
-//     <div className={styles.authContainer}>
-//       <h2>Login</h2>
-//       <form className={styles.form} onSubmit={handleSubmit}>
-//         <label className={styles.label}>
-//           Email
-//           <input
-//             type="email"
-//             name="email"
-//             required
-//             onChange={handleChange}
-//             value={state.email}
-//             className={styles.input}
-//           />
-//         </label>
-//         <label className={styles.label}>
-//           Password
-//           <input
-//             type="password"
-//             name="password"
-//             required
-//             onChange={handleChange}
-//             value={state.password}
-//             className={styles.input}
-//           />
-//         </label>
-//         <button type="submit" className={styles.formBtn}>
-//           SIGN IN
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
