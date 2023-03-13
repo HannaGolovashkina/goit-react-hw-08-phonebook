@@ -2,7 +2,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { logOutUser } from 'redux/auth/authOperations';
-import { Title, TitleColor, Button } from './Header.styled';
+import { Title, TitleColor, Button, Paragraf } from './Header.styled';
 // import Modal from 'components/Modal/Modal';
 
 function Header() {
@@ -23,7 +23,7 @@ function Header() {
       </Title>
       {isLoggedIn ? (
         <div >
-          <p >{user.name}</p>
+          <Paragraf >{user.name}</Paragraf>
           <Button type="button"  onClick={onLogOut}>
             Log Out
           </Button>

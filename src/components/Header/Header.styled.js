@@ -14,6 +14,11 @@ export const TitleColor = styled.span`
   color: var(--accent-text-color);
 `;
 
+export const Paragraf = styled.p`
+  color: var(--accent-text-color);
+  padding: 10px;
+`;
+
 export const Button = styled.button`
   display: flex;
   align-items: center;
