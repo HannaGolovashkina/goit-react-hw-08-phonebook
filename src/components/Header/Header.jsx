@@ -1,15 +1,13 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { logOutUser } from 'redux/auth/authOperations';
-import { Title, TitleColor, Button, ButtonText } from './Header.styled';
-import { BsFillPersonPlusFill } from 'react-icons/bs';
-import Modal from 'components/Modal/Modal';
-import ContactForm from 'components/ContactForm/ContactForm';
+import { Title, TitleColor, Button } from './Header.styled';
+// import Modal from 'components/Modal/Modal';
 
 function Header() {
-  const [showModal, setShowModal] = useState(false);
-  const toggleModal = () => setShowModal(prevShowModal => !prevShowModal);
+  // const [showModal, setShowModal] = useState(false);
+  // const toggleModal = () => setShowModal(prevShowModal => !prevShowModal);
 
   const { isLoggedIn, user } = useSelector(state => state.auth);
   const dispatch = useDispatch();
@@ -34,16 +32,13 @@ function Header() {
         <div >
           <NavLink  to={'/register'}>
           <Button type="submit">
-              {/* {isSubmitting ? '...' : 'Registration'} */}
               Registration
             </Button>
           </NavLink>
           <NavLink  to={'/login'}>
           <Button type="submit">
-              {/* {isSubmitting ? '...' : 'Registration'} */}
               Sing in
             </Button>
-            {/* Sing in */}
           </NavLink>
         </div>
       )}
@@ -55,11 +50,11 @@ function Header() {
       </Button> */}
 
 
-      {showModal && (
+      {/* {showModal && (
         <Modal onClose={toggleModal}>
           <ContactForm onClose={toggleModal} />
         </Modal>
-      )}
+      )} */}
     </>
   );
 }

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactsSlice/contactsOperations';
 import { Label, Title, Input, Button } from './ContactForm.styled';
-// import { Report } from 'notiflix/build/notiflix-report-aio';
 
 function ContactForm() {
   const dispatch = useDispatch();
@@ -16,14 +15,6 @@ function ContactForm() {
     e.preventDefault();
 
     const newElement = { name, number };
-
-    // contacts.some(contact => contact.name === name)
-    //   ? Report.warning(
-    //       `${name}`,
-    //       'This user is already in the contact list.',
-    //       'OK',
-    //     )
-    //   : 
       dispatch(addContact(newElement));
 
     reset();
@@ -36,6 +27,7 @@ function ContactForm() {
   };
 
   return (
+    
     <form onSubmit={onSubmitForm}>
       <Label>
         <Title>Name</Title>

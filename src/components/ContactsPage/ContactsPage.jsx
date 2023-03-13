@@ -4,20 +4,18 @@ import ContactForm from '../ContactForm/ContactForm';
 import Filter from '../Filter/Filter';
 import ContactList from '../ContactList/ContactList';
 
-import styles from '../app.module.css';
+import { WelcomeText, Container, ContainerWrapper} from './ContactPage.styled';
 
 export const ContactsPage = () => {
   const contactsRedux = useSelector(state => state.contacts);
   const { isLoggedIn } = useSelector(state => state.auth);
 
   return (
-    <div className={styles.container}>
+    <Container>
       {isLoggedIn ? (
         <>
-          <h1 className={styles.title}>Phonebook</h1>
           <ContactForm />
-          <h2 className={styles.subTitle}>Contacts</h2>
-          <div className={styles.contactListWrap}>
+          <ContainerWrapper>
             {contactsRedux.length === 0 ? (
               <p>There is no contacts in your list.</p>
             ) : (
@@ -26,11 +24,11 @@ export const ContactsPage = () => {
                 <ContactList />
               </>
             )}
-          </div>
+          </ContainerWrapper>
         </>
       ) : (
-        <p className={styles.welcomeText}>Welcome to Phonebook</p>
+        <WelcomeText>Welcome to Phonebook</WelcomeText>
       )}
-    </div>
+    </Container>
   );
 };
