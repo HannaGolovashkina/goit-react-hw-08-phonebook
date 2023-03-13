@@ -30,22 +30,9 @@ export const LoginForm = () => {
       <Title>Login</Title>
 
       <Formik
-        // initialValues={{ name: '', email: '', password: '' }}
         onSubmit={handleSubmit}
-        // validationSchema={userRegisterSchema}
       >
-        {/* {({ state, handleChange, handleSubmit, isSubmitting }) => ( */}
           <Form onSubmit={handleSubmit}>
-            {/* <Label>
-              <TitleInput>What is your name?</TitleInput>
-              <Input
-                type="text"
-                name="name"
-                onChange={handleChange}
-                value={state.name}
-              />
-              <ErrorMessage name="name" component="div" />
-            </Label> */}
             <Label>
               <TitleInput>Your e-mail adress?</TitleInput>
               <Input
@@ -69,11 +56,9 @@ export const LoginForm = () => {
               <ErrorMessage name="password" component="div" />
             </Label>
             <Button type="submit">
-              {/* {isSubmitting ? '...' : 'Registration'} */}
               Sing in
             </Button>
           </Form>
-        {/* )} */}
       </Formik>
     </>
   );
