@@ -31,13 +31,14 @@ export const LoginForm = () => {
 
       <Formik
         // onSubmit={handleSubmit}
-        >
+      >
           <Form onSubmit={handleSubmit}>
             <Label>
               <TitleInput>Your e-mail adress?</TitleInput>
               <Input
                 type="email"
                 name="email"
+                required
                 placeholder="across@mail.com"
                 onChange={handleChange}
                 value={state.email}
@@ -49,6 +50,7 @@ export const LoginForm = () => {
               <Input
                 type="password"
                 name="password"
+                required
                 placeholder="examplepwd12345"
                 onChange={handleChange}
                 value={state.password}

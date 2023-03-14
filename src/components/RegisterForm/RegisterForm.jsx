@@ -38,6 +38,7 @@ const handleSubmit = e => {
               <Input
                 type="text"
                 name="name"
+                required
                 placeholder="Adrian Cross"
                 onChange={handleChange}
                 value={state.name}
@@ -49,6 +50,7 @@ const handleSubmit = e => {
               <Input
                 type="email"
                 name="email"
+                required
                 placeholder="across@mail.com"
                 onChange={handleChange}
                 value={state.email}
@@ -60,6 +62,7 @@ const handleSubmit = e => {
               <Input
                 type="password"
                 name="password"
+                required
                 placeholder="examplepwd12345"
                 onChange={handleChange}
                 value={state.password}
